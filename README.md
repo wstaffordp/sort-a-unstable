@@ -1,6 +1,6 @@
 # Sort A Unstable
 
-A fast, in-place, non-auxiliary sorting algorithm that discards original sort order context.
+It's a fast, in-place, non-auxiliary, unstable sorting algorithm.
 
 `sort_a_unstable_ascending()` and `sort_a_unstable_descending()` are the unstable sorting functions that sort elements in either ascending or descending order while discarding original sort order context.
 
