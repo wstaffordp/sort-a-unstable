@@ -2,8 +2,6 @@
 
 A fast, in-place, non-auxiliary sorting algorithm that discards original sort order context.
 
-## Reference
-
 `sort_a_unstable_ascending()` and `sort_a_unstable_descending()` are the unstable sorting functions that sort elements in either ascending or descending order while discarding original sort order context.
 
 They accept the following 2 arguments in left-to-right order.
@@ -11,19 +9,13 @@ They accept the following 2 arguments in left-to-right order.
 1. `input_count` is the count of elements in `input`.
 2. `input` is the array of elements to sort.
 
-## Classification
-
 It's in the same class as Heap Sort, Selection Sort, Shell Sort and Unstable Binary Insertion Sort.
-
-## Speed
 
 It's the fastest unstable sorting algorithm that doesn't require substantial auxiliary space for sorted runs or unsorted subarrays.
 
 It's close to Insertion Sort for small input sizes, then it scales to the fastest Shell Sort gap sequence for all input data types and unsorted distributions.
 
 I welcome submissions of algorithms in the same class that challenge the aforementioned claim.
-
-## Security
 
 The following security explanation uses the context of ascending sort order.
 
