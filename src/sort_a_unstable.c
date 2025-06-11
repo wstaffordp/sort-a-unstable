@@ -1,10 +1,10 @@
 #include "sort_a_unstable.h"
 
-void sort_a_unstable_ascending(uintptr_t input_count, int *input) {
+void sort_a_unstable_ascending(size_t input_count, int *input) {
   int input_capture;
-  uintptr_t gap = input_count;
-  uintptr_t i;
-  uintptr_t j;
+  size_t gap = input_count;
+  size_t i;
+  size_t j;
 
   while (gap > 15) {
     gap = (gap >> 5) + (gap >> 3);
@@ -49,11 +49,11 @@ void sort_a_unstable_ascending(uintptr_t input_count, int *input) {
   }
 }
 
-void sort_a_unstable_descending(uintptr_t input_count, int *input) {
+void sort_a_unstable_descending(size_t input_count, int *input) {
   int input_capture;
-  uintptr_t gap = input_count;
-  uintptr_t i;
-  uintptr_t j;
+  size_t gap = input_count;
+  size_t i;
+  size_t j;
 
   while (gap > 15) {
     gap = (gap >> 5) + (gap >> 3);
