@@ -11,7 +11,7 @@ They accept the following 2 arguments in left-to-right order.
 
 It's in the same class as Heap Sort, Selection Sort, Shell Sort and Unstable Binary Insertion Sort.
 
-It's the fastest unstable sorting algorithm that doesn't require substantial auxiliary space for sorted runs or unsorted subarrays.
+It's the fastest unstable sorting algorithm that doesn't require auxiliary space for subarrays.
 
 It's close to Insertion Sort for small input sizes, then it scales to the fastest Shell Sort gap sequence for all input data types and unsorted distributions.
 
