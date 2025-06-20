@@ -1,8 +1,8 @@
 #include "sort_a_unstable.h"
 
-void sort_a_unstable_ascending(size_t input_count, int *input) {
-  int input_capture;
-  size_t gap = input_count;
+void sort_a_unstable_ascending(size_t elements_count, int *elements) {
+  int element;
+  size_t gap = elements_count;
   size_t i;
   size_t j;
 
@@ -10,19 +10,19 @@ void sort_a_unstable_ascending(size_t input_count, int *input) {
     gap = (gap >> 5) + (gap >> 3);
     i = gap;
 
-    while (i < input_count) {
-      input_capture = input[i];
+    while (i < elements_count) {
+      element = elements[i];
       j = i;
 
       while (
         j >= gap &&
-        input[j - gap] > input_capture
+        elements[j - gap] > element
       ) {
-        input[j] = input[j - gap];
+        elements[j] = elements[j - gap];
         j -= gap;
       }
 
-      input[j] = input_capture;
+      elements[j] = element;
       i++;
     }
   }
@@ -30,28 +30,28 @@ void sort_a_unstable_ascending(size_t input_count, int *input) {
   i = 1;
   gap = 0;
 
-  while (i < input_count) {
-    input_capture = input[i];
+  while (i < elements_count) {
+    element = elements[i];
     j = i;
 
     while (
       j > 0 &&
-      input[gap] > input_capture
+      elements[gap] > element
     ) {
-      input[j] = input[gap];
+      elements[j] = elements[gap];
       j = gap;
       gap--;
     }
 
-    input[j] = input_capture;
+    elements[j] = element;
     gap = i;
     i++;
   }
 }
 
-void sort_a_unstable_descending(size_t input_count, int *input) {
-  int input_capture;
-  size_t gap = input_count;
+void sort_a_unstable_descending(size_t elements_count, int *elements) {
+  int element;
+  size_t gap = elements_count;
   size_t i;
   size_t j;
 
@@ -59,19 +59,19 @@ void sort_a_unstable_descending(size_t input_count, int *input) {
     gap = (gap >> 5) + (gap >> 3);
     i = gap;
 
-    while (i < input_count) {
-      input_capture = input[i];
+    while (i < elements_count) {
+      element = elements[i];
       j = i;
 
       while (
         j >= gap &&
-        input[j - gap] < input_capture
+        elements[j - gap] < element
       ) {
-        input[j] = input[j - gap];
+        elements[j] = elements[j - gap];
         j -= gap;
       }
 
-      input[j] = input_capture;
+      elements[j] = element;
       i++;
     }
   }
@@ -79,20 +79,20 @@ void sort_a_unstable_descending(size_t input_count, int *input) {
   i = 1;
   gap = 0;
 
-  while (i < input_count) {
-    input_capture = input[i];
+  while (i < elements_count) {
+    element = elements[i];
     j = i;
 
     while (
       j > 0 &&
-      input[gap] < input_capture
+      elements[gap] < element
     ) {
-      input[j] = input[gap];
+      elements[j] = elements[gap];
       j = gap;
       gap--;
     }
 
-    input[j] = input_capture;
+    elements[j] = element;
     gap = i;
     i++;
   }

@@ -6,8 +6,8 @@ It's a fast, in-place, non-auxiliary, unstable sorting algorithm.
 
 They accept the following 2 arguments in left-to-right order.
 
-1. `input_count` is the count of elements in `input`.
-2. `input` is the array of elements to sort.
+1. `elements_count` is the count of elements in `elements`.
+2. `elements` is the array of elements to sort.
 
 It's in the same class as Heap Sort, Selection Sort, Shell Sort and Unstable Binary Insertion Sort.
 
@@ -51,6 +51,6 @@ Gap   Result
 
 It doesn't pre-calculate a consistent gap sequence that has an upper limit.
 
-Instead, each sorting instance calculates a gap sequence dynamically with inconsistencies among different `input_count` values.
+Instead, each sorting instance calculates a gap sequence dynamically with inconsistencies among different `elements_count` values.
 
 After sorting with each `gap` value greater than `1`, it falls through to a hard-coded, optimized variation of Insertion Sort.

@@ -3,8 +3,8 @@
 
 #include <stddef.h>
 
-void sort_a_unstable_ascending(size_t input_count, int *input);
+void sort_a_unstable_ascending(size_t elements_count, int *elements);
 
-void sort_a_unstable_descending(size_t input_count, int *input);
+void sort_a_unstable_descending(size_t elements_count, int *elements);
 
 #endif
